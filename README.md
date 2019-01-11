@@ -59,8 +59,5 @@ Original Balch event list with GOES Temp and Emission Measure values added from 
 SEP event list for events from 2004 to 2017
 
 #### sep_events_2004_2017.csv - ***DEPRECATED (I think)***
-replcae sep_events_2004_2017.xls with the csv version
-
-
-Type	Name	Latest commit message	Commit time
+csv version of sep_events_2004_2017.xls 
 
