@@ -11,6 +11,11 @@ This notebook deals ONLY with the original Balch features - Soft X-ray ingrated 
 #### sep_master_new_features.ipynb	
 Main Notebook for dealing with all new features beyond Balch - Wind Waves 1 MHz fluence, GOES temp and emission measure, and soon to be RSTN integrated flux. 
 
+#### GOES_temp_em_scratch.ipynb
+Notebook to cross reference GOES Temp and Emission Measure files for the original Balch event list (1986 - 2004) with Doug's student's event list which contains T and EM values. This Notebook generates the data file: AllEvtsShuffled_1986_2004_t_em.csv
+
+----
+
 #### SEP.ipynb - ***DEPRECATED***
 
 #### sep_master_T_EM.ipynb - ***DEPRECATED***
@@ -22,11 +27,10 @@ Breakout notebook to look at logisitic regression only
 #### sep_DecisionTree.ipynb - ***DEPRECATED***
 Breakout notebook to look at decision trees only
 
-#### GOES_temp_em_scratch.ipynb
-Notebook to cross reference GOES Temp and Emission Measure files for the original Balch event list (1986 - 2004) with Doug's student's event list which contains T and EM values. This Notebook generates the data file: AllEvtsShuffled_1986_2004_t_em.csv
-
 #### SEP.ipynb
-Main Juptyer Python notebook 
+Original Jupyter Notebook from ML class
+
+
 
 # Data Files
 
