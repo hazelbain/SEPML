@@ -49,10 +49,11 @@ Shuffled version of ControlEvents_student.xls
 #### AllEvtsShuffled_1986_2004_t_em.csv - ***USE THIS ONE***
 Original Balch event list with GOES Temp and Emission Measure values added from Doug's Student's event list
 
+----
+
 #### AllEvtsShuffled.csv	(???)
 #### AllEvtsShuffled_1986_2004.csv	(???)
 #### AllEvtsShuffled_1986_2004_cme.csv	(???)
-
 
 #### sep_events_2004_2017.xls  - ***DEPRECATED (I think)***
 SEP event list for events from 2004 to 2017
