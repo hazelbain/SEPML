@@ -14,6 +14,9 @@ Main Notebook for dealing with all new features beyond Balch - Wind Waves 1 MHz 
 #### GOES_temp_em_scratch.ipynb
 Notebook to cross reference GOES Temp and Emission Measure files for the original Balch event list (1986 - 2004) with Doug's student's event list which contains T and EM values. This Notebook generates the data file: AllEvtsShuffled_1986_2004_t_em.csv
 
+#### wind_waves_scratch.ipynb
+Notebook to read wind WAVES RAD1 and integrate the 1 MHz flux corresponding to potential Type III radio burts associated with the flare.
+
 ----
 
 #### SEP.ipynb - ***DEPRECATED***
