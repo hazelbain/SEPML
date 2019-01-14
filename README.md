@@ -20,6 +20,7 @@ Notebook to read wind WAVES RAD1 and integrate the 1 MHz flux corresponding to p
 ----
 
 #### SEP.ipynb - ***DEPRECATED***
+Original Jupyter Notebook from ML class
 
 #### sep_master_T_EM.ipynb - ***DEPRECATED***
 Analysis rolled into sep_master_new_features
@@ -29,9 +30,6 @@ Breakout notebook to look at logisitic regression only
 
 #### sep_DecisionTree.ipynb - ***DEPRECATED***
 Breakout notebook to look at decision trees only
-
-#### SEP.ipynb
-Original Jupyter Notebook from ML class
 
 
 
@@ -49,8 +47,11 @@ Doug's student's event list. Based on Balch event list but expanded to include n
 #### AllEvtsShuffled_1986_2004_cme.csv
 Shuffled version of ControlEvents_student.xls
 
-#### AllEvtsShuffled_1986_2004_t_em.csv - ***USE THIS ONE***
+#### AllEvtsShuffled_1986_2004_t_em.csv
 Original Balch event list with GOES Temp and Emission Measure values added from Doug's Student's event list
+
+#### AllEvtsShuffled_1986_2004_t_em_1MHz.csv - ***USE THIS ONE***
+Original Balch event list with GOES Temp and Emission Measure values added from Doug's Student's event list, and wind waves 1 MHz fluence features
 
 ----
 
