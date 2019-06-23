@@ -5,6 +5,7 @@
 
 
 import pandas as pd
+import numpy as np
 #from datetime import timedelta, datetime #, strptime, strftime
 from sunpy.instr.goes import get_goes_event_list
 from sunpy.time import parse_time, TimeRange, is_time_in_given_format
@@ -13,13 +14,15 @@ from sunpy.lightcurve import GOESLightCurve
 from datetime import timedelta
 import datetime
 import operator
-flare_df = pd.read_excel("ControlEvents_student.xls") #read in new SEP data 
+from astropy import units as u
+
+#flare_df = pd.read_excel("ControlEvents_student.xls") #read in new SEP data 
 
 
 # In[43]:
 
 
-def flare_persistence(flare_pd, hours):
+def flare_persistence(flare_df, hours):
 
     '''This function finds the highest flare flux a specified amount of hours
     before the flare onset. We call this the flare persistence.
@@ -34,12 +37,10 @@ def flare_persistence(flare_pd, hours):
     flare_df: original file with the flare persistence appended for all events
     
     '''
-    
-    flare_df = flare_pd
     flare_start = flare_df['FlrOnset']
     flare_per = []
-
-    for g in flare_start:    
+    
+    for g in flare_start:  
         if isinstance(g,str) == True: #make sure its not nan
             error = 0 #to check whether or not we were able to match peak times (refer to nested for loop)
             flare_dt = datetime.datetime.strptime(g, "%Y-%m-%dT%H:%M:00.000")
@@ -62,19 +63,24 @@ def flare_persistence(flare_pd, hours):
                         try:
                             flx = flareclass_to_flux(gc)
                         except:
-                            flx = 0
+                            flx = np.nan
                         max_flux.append(flx)
                     else:
-                        flx = 0
+                        flx = np.nan
                         max_flux.append(flx)
+            
+                index, value = max(enumerate(max_flux), key=operator.itemgetter(1))
+                flare_per.append(value.to_value(unit = None ))
+            
             elif len(g_evt_list) == 0:
-                flx = 0 
-                max_flux.append(flx)
-
-            index, value = max(enumerate(max_flux), key=operator.itemgetter(1))
-            flare_per.append(value)
-
-    flare_df['FlarePersistence'+str(hours)] = flare_per
+                #flx = 0.0
+                #max_flux.append(flx)
+                flare_per.append(0.0)
+            
+    flare_df['FlarePersistence'] = flare_per
+    #for g in range(len(flare_df.FlarePersistence)):
+    #    if flare_df.FlarePersistence[g] != 0:
+    #        flare_df.FlarePersistence[g] = flare_df.FlarePersistence[g]
 
     return flare_df
 
