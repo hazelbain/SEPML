@@ -69,8 +69,13 @@ def flare_persistence(flare_df, hours):
                         flx = np.nan
                         max_flux.append(flx)
             
-                index, value = max(enumerate(max_flux), key=operator.itemgetter(1))
-                flare_per.append(value.to_value(unit = None ))
+                try:
+                    index, value = max(enumerate(max_flux), key=operator.itemgetter(1))
+                    val = value.to_value(unit=None)
+                except:
+                    val = np.nan
+                
+                flare_per.append(val)
             
             elif len(g_evt_list) == 0:
                 #flx = 0.0
