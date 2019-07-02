@@ -81,7 +81,7 @@ def flare_persistence(flare_df, hours):
                 #flx = 0.0
                 #max_flux.append(flx)
                 flare_per.append(0.0)
-            
+
     flare_df['FlarePersistence'] = flare_per
     #for g in range(len(flare_df.FlarePersistence)):
     #    if flare_df.FlarePersistence[g] != 0:

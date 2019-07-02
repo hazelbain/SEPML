@@ -85,6 +85,10 @@ def rad1_analysis(data, path = '/Users/hazelbain/data/wind/waves/wav_hi/' ):
             #print('J: %.2E' % J)
             #plot_rad1(df, st = seps.FlrOnset.iloc[i], et = seps.Flrendtime.iloc[i], peak  = seps.Flrmaxtime.iloc[i])
 
+            
+    data.FlrOnset =  [pd.datetime.strftime(t, "%Y-%m-%dT%H:%M:00.000") for t in data.FlrOnset]
+    data.Flrendtime = [pd.datetime.strftime(t, "%Y-%m-%dT%H:%M:00.000") for t in data.Flrendtime]
+    data.Flrmaxtime = [pd.datetime.strftime(t, "%Y-%m-%dT%H:%M:00.000") for t in data.Flrmaxtime]
 
     return data
 
